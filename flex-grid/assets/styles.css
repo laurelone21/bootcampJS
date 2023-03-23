@@ -1,0 +1,164 @@
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.template{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr [col-start]);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd "
+    "am am am am am am al al al2 al2 at at";
+    border: 1px dashed darkblue;
+    margin: 0px 50px;
+}
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+}
+
+li{
+    padding: 10px;
+    color: black;
+}
+
+.active{
+    color: skyblue;
+    background: black;
+}
+
+li:active{
+    color: skyblue;
+    background: black;
+}
+
+input[type=search]{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid gainsboro;
+    width: 400px;
+    background: whitesmoke;
+}
+
+.title-articles{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.title-articles span{
+    background: skyblue;
+    margin: 5px;
+    padding: 5px 5px;
+}
+
+h2{
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding: 0px 10px;
+}
+
+p{
+    font-size: 20px;
+    padding: 5px 10px;
+    text-align: justify;
+}
+
+span{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    color: darkslategray;
+    padding-top: 10px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+}
+
+.articles{
+    margin: 5px 20px;
+    padding: 10px;
+    box-shadow: 0 0 2px 2px gray;
+    background: whitesmoke;
+}
+
+.articles-list{
+    margin: 5px 20px;
+    padding: 10px;
+    box-shadow: 0 0 2px 2px gray;
+    background: whitesmoke;
+}
+
+.item-header{
+    grid-area: hd;
+}
+
+.item-a{ /* articleMain */
+    grid-area: am;
+}
+
+.item-b{ /* list article*/
+    grid-area: al;
+    justify-content: space-between;
+}
+
+.item-c{ /* list article - 2*/
+    grid-area: al2;
+    justify-content: space-between;
+}
+
+.item-d{  /* list article top */
+    grid-area: at;
+    justify-content: space-between;
+}
+
+.reloj{
+    width: 100%;
+}
+
+.author img{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.author{
+    flex-direction: row;
+    align-items: center;
+}
+
+h5{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    color: darkslategray;
+    padding: 0px 10px;
+}
